@@ -3,7 +3,6 @@ import MobileNavOne from "@/components/MobNavOne";
 import NavTwo from "@/components/NavTwo";
 import Pricing from "@/components/Pricing";
 import Trail from "@/components/Trail";
-import { Nabla } from "next/font/google";
 import React from "react";
 
 const Pricingpage = () => {

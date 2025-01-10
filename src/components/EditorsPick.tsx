@@ -6,7 +6,7 @@ const EditorsPick = () => {
     <section className="flex justify-center items-center bg-textgrayOne mb-16">
       <div className="w-full max-w-5xl px-4 mt-16 mx-auto container">
         <div className="space-y-2 text-center">
-          <h3 className="text-[#252B42] font-semibold text-[1.6rem]">EDITOR'S PICK</h3>
+          <h3 className="text-[#252B42] font-semibold text-[1.6rem]">EDITOR`S PICK</h3>
           <p className="text-[#737373] text-[0.875rem] mx-16 sm:mx-auto">
             Problems trying to resolve the conflict between
           </p>

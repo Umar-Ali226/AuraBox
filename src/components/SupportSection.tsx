@@ -85,7 +85,7 @@ const SupportSection = () => {
 
         {/* Text */}
         <p className="text-[0.8rem] font-semibold text-[#252B42] uppercase tracking-wider text-center">
-          WE CAN'T WAIT TO MEET YOU
+          WE CAN`T WAIT TO MEET YOU
         </p>
 
         {/* Title */}

@@ -17,7 +17,7 @@ const Trail = () => {
             met sent. RELIT official consequent.
           </p>
           <p className="flex sm:hidden text-secondtextColor  text-[0.875rem] mx-[3.4rem] sm:mx-auto">
-            We focus on ergonomics and meeting you where you work. It's only a
+            We focus on ergonomics and meeting you where you work. It`s only a
             keystroke away.
           </p>
           <button className="bg-[#23A6F0] text-white font-semibold pl-[2.5rem] pr-[2.5rem] py-[1rem] rounded-sm">

@@ -4,7 +4,6 @@ import {
     CardContent,
     CardDescription,
     CardFooter,
-    CardHeader,
     CardTitle,
   } from "./ui/card";
   import Image from "next/image";
@@ -51,10 +50,10 @@ import {
                 <span className="text-gray-400">New</span>
               </div>
               <CardTitle className="text-lg font-normal text-[#252B42] leading-snug mb-3">
-                Loudest à la Madison #1 <br /> (L'integral)
+                Loudest à la Madison #1 <br /> (L`integral)
               </CardTitle>
               <CardDescription className="text-[#737373] text-sm mb-4 max-w-[17.5rem]">
-                We focus on ergonomics and meeting you where you work. It's only a
+                We focus on ergonomics and meeting you where you work. It`s only a
                 keystroke away.
               </CardDescription>
               <div className="flex items-center justify-between text-secondtextColor text-xs">
@@ -115,10 +114,10 @@ import {
                 <span className="text-gray-400">New</span>
               </div>
               <CardTitle className="text-lg font-normal text-textColor leading-snug mb-3">
-                Loudest à la Madison #1 <br /> (L'integral)
+                Loudest à la Madison #1 <br /> (L`integral)
               </CardTitle>
               <CardDescription className="text-secondtextColor text-sm mb-4 max-w-[17.5rem]">
-                We focus on ergonomics and meeting you where you work. It's only a
+                We focus on ergonomics and meeting you where you work. It`s only a
                 keystroke away.
               </CardDescription>
               <div className="flex items-center justify-between text-secondtextColor text-xs">
@@ -179,10 +178,10 @@ import {
                 <span className="text-gray-400">New</span>
               </div>
               <CardTitle className="text-lg font-normal text-textColor leading-snug mb-3">
-                Loudest à la Madison #1 <br /> (L'integral)
+                Loudest à la Madison #1 <br /> (L`integral)
               </CardTitle>
               <CardDescription className="text-secondtextColor text-sm mb-4 max-w-[17.5rem]">
-                We focus on ergonomics and meeting you where you work. It's only a
+                We focus on ergonomics and meeting you where you work. It`s only a
                 keystroke away.
               </CardDescription>
               <div className="flex items-center justify-between text-secondtextColor text-xs">

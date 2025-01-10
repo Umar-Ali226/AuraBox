@@ -110,7 +110,7 @@ const Pricing = () => {
             the two major realms of Classical physics
           </p>
           <p className="flex sm:hidden text-[#737373]  text-[0.875rem] mx-[3.4rem] sm:mx-auto">
-            We focus on ergonomics and meeting you where you work. It's only a
+            We focus on ergonomics and meeting you where you work. It`s only a
             keystroke away.
           </p>
         </div>
