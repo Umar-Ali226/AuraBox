@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import TopHeader from '@/components/TopHeader';
 import MobileNavTwo from '@/components/MobNavTwo';
-import Image from 'next/image';
 
 const ShipmentPage = () => {
   const shipmentDetails = {

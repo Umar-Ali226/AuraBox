@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image";
-import Filters from "./Filter";
 
 const Shop = () => {
   return (

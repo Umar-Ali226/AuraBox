@@ -1,10 +1,26 @@
-'use client'
+'use client';
 import { useEffect, useState } from 'react';
 import { client } from '../sanity/lib/client'; // Make sure this is your sanity client setup
 import Image from 'next/image';
 
+// Define types for the data
+interface ContactInfo {
+  icon: {
+    asset: {
+      url: string;
+    };
+  };
+  text: string;
+}
+
+interface TopHeaderData {
+  bgClass?: string;
+  contactInfo: ContactInfo[];
+  freeShippingText: string;
+}
+
 const TopHeader = () => {
-  const [topHeaderData, setTopHeaderData] = useState<any>(null);
+  const [topHeaderData, setTopHeaderData] = useState<TopHeaderData | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +54,7 @@ const TopHeader = () => {
         <div className="flex justify-around items-center">
           {/* Contact Info */}
           <div className="flex gap-x-[1.7rem]">
-            {topHeaderData.contactInfo.map((contactItem: any, index: number) => (
+            {topHeaderData.contactInfo.map((contactItem, index) => (
               <div key={index} className="flex items-center gap-x-1">
                 <Image
                   src={contactItem.icon.asset.url}
@@ -68,6 +84,76 @@ const TopHeader = () => {
 };
 
 export default TopHeader;
+// 'use client'
+// import { useEffect, useState } from 'react';
+// import { client } from '../sanity/lib/client'; // Make sure this is your sanity client setup
+// import Image from 'next/image';
+
+// const TopHeader = () => {
+//   const [topHeaderData, setTopHeaderData] = useState<any>(null);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const data = await client.fetch(`
+//         *[_type == "topHeader"][0] {
+//           bgClass,
+//           contactInfo[] {
+//             icon {
+//               asset -> {
+//                 url
+//               }
+//             },
+//             text
+//           },
+//           freeShippingText
+//         }
+//       `);
+//       setTopHeaderData(data);
+//     };
+    
+//     fetchData();
+//   }, []);
+
+//   if (!topHeaderData) return <div>Loading...</div>;
+
+//   return (
+//     <header
+//       className={`${topHeaderData.bgClass || " bg-[#252B42]"} flex items-center w-full h-10`}
+//     >
+//       <div className="container mx-auto font-semibold text-[0.550rem] md:text-[0.9rem] text-lighttextColor">
+//         <div className="flex justify-around items-center">
+//           {/* Contact Info */}
+//           <div className="flex gap-x-[1.7rem]">
+//             {topHeaderData.contactInfo.map((contactItem: any, index: number) => (
+//               <div key={index} className="flex items-center gap-x-1">
+//                 <Image
+//                   src={contactItem.icon.asset.url}
+//                   alt="Icon"
+//                   width={16}
+//                   height={16}
+//                 />
+//                 <p className="text-white">{contactItem.text}</p>
+//               </div>
+//             ))}
+//           </div>
+
+//           {/* Free Shipping Text */}
+//           <p className="text-white">{topHeaderData.freeShippingText}</p>
+
+//           {/* Social Media Icons */}
+//           <div className="flex items-center space-x-1">
+//             <p className="text-white">Follow Us &nbsp; :</p>
+//             <div className="flex gap-x-1 items-center">
+//               {/* Add your social media icons here */}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </header>
+//   );
+// };
+
+// export default TopHeader;
 // import Image from "next/image";
 
 // /// COMPONENT FOR ( phone & e-mail )

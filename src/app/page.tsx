@@ -8,7 +8,6 @@ import FeaturedProducts from "@/components/FtdProducts";
 import Vitaclassicproduct from "@/components/VitaProduct";
 import Neuraluniverse from "@/components/NeuralUniverse";
 import FeaturedPosts from "@/components/FtPosts";
-import Filters from "@/components/Filter";
 const Homepage = () => {
   return (
     <section>
