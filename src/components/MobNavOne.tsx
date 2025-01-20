@@ -16,7 +16,7 @@ const Header = () => {
         <div className="flex items-center justify-between w-full mb-4">
           {/* --- LOGO --- */}
           <div className="font-bold text-[1rem]">
-            <Link href="/">Bandage</Link>
+            <Link href="/">AuraBox</Link>
           </div>
           {/* --- ICONS --- */}
           <div className="flex space-x-5">

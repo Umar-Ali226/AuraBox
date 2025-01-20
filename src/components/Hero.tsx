@@ -1,20 +1,21 @@
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
   return (
     <section className="container mx-auto">
       {/* --- HERO SECTION ( DESKTOP ) --- */}
-      <div className="relative bg-[url('../../public/shop-now.jpeg')] bg-cover bg-top h-[39rem] hidden sm:flex items-center -mt-4 px-6 md:px-12 lg:px-40">
+      <div className="relative bg-[url('/images/bgImages/watchnow.png')] bg-cover bg-top h-[39rem] hidden sm:flex items-center -mt-4 px-6 md:px-12 lg:px-40">
         {/* --- CONTENT CONTAINER --- */}
         <div className="text-white max-w-lg md:max-w-2xl mt-24 space-y-6">
-             <p className="text-lg font-semibold uppercase">Summer 2020</p>
+             <p className="text-lg font-semibold uppercase">Deal 2025</p>
            <h1 className="text-6xl uppercase font-semibold leading-tight">
             New Collection </h1>
           <p className="text-lg font-bold max-w-lg text-lighttextGray1">
             We know how large objects will act, <br /> but things on a small scale. </p>
-          
+          <Link href="/shop">
           <button className="mt-6 px-10 py-4  bg-green-400 text-white font-semibold rounded-sm hover:bg-green-600 transition">
-            Shop Now </button>
+            Shop Now </button></Link>
         </div>
       </div>
 

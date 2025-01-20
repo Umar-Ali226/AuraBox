@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import { IoMdCart } from "react-icons/io";
+import { FaHeart } from "react-icons/fa";
+import { IoIosSearch } from "react-icons/io";
 
 const Nav = () => {
   return (
-    <header className="w-full h-auto mt-2 ml-auto md:-ml-3 xl:-ml-10">
+    <header className="w-full h-auto mt-2 ml-auto mb-2 md:-ml-3 md:mb-2  xl:-ml-10">
       <div className="container mx-auto hidden sm:flex justify-around items-center">
         {/* --- LOGO --- */}
         <div className="font-bold text-[1rem] xl:text-[1.3rem] text-[#252B42]">
@@ -46,31 +49,11 @@ const Nav = () => {
 
         {/* --- ICONS & LOGIN / REGISTER --- */}
         <div className="hidden sm:flex items-center text-[0.700rem] xl:text-[0.875rem] gap-x-[0.3rem] -mr-2 md:-mr-14 xl:-mr-24">
-          <div className="flex items-center gap-x-1 text-[#23A6F0] font-bold">
-            <Image
-              src="/images/icons/user-icon.png"
-              alt="User-icon"
-              width={35}
-              height={35}
-              className="w-3 h-3"
-            />
-            <p>Login / Register</p>
-          </div>
-          <div className="flex">
-            {[
-              { src: "/images/icons/search-icon.png", alt: "Search-icon" },
-              { src: "/images/icons/cart-icon.png", alt: "Cart-icon" },
-              { src: "/images/icons/wishlist-icon.png", alt: "Wishlist-icon" },
-            ].map((icon, index) => (
-              <Image
-                key={index}
-                src={icon.src}
-                alt={icon.alt}
-                width={100}
-                height={100}
-                className="w-12 h-11"
-              />
-            ))}
+          <div className="flex gap-2 items-center">
+       <div className="text-[#23A6F0] text-xl"><IoIosSearch /></div>
+        <div className="text-[#23A6F0] text-xl"><IoMdCart /></div>
+        <div className="text-[#23A6F0] text-md"><FaHeart /></div>
+        
           </div>
         </div>
       </div>

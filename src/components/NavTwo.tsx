@@ -7,7 +7,7 @@ const NavTwo = () => {
       <div className="container mx-auto hidden sm:flex justify-around items-center px-0 md:px-[0rem] lg:px-[5rem] xl:px-[8rem] lg:gap-x-28 ">
         {/* --- LOGO --- */}
         <div className="font-bold text-[1rem] xl:text-[1.3rem] text-darkbackgroundColor self-center pl-6 xl:pl-6 2xl:pl-14">
-          <Link href="/">Bandage</Link>
+          <Link href="/">AuraBox</Link>
         </div>
 
         {/* --- NAVIGATION LINKS --- */}

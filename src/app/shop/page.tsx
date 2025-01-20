@@ -1,3 +1,4 @@
+'use client'
 import Shop from "@/components/Shop";
 import TopHeader from "@/components/TopHeader";
 import Header from "@/components/Header";
@@ -13,13 +14,12 @@ const Shoppage = () => {
       <MobileNavTwo />
       <Header />
       <Shop />
+      <Products/>
 
       <div className="hidden sm:block">
         <BrandLogo />
         <Footer topBgColor="bg-text-white" bottomBgColor="bg-textgrayOne" />
       </div>
-
-      <Products />
 
       <div className="block sm:hidden">
         <BrandLogo />

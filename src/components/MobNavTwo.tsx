@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { IoMdCart } from "react-icons/io";
 
 const MobileNavTwo = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ const MobileNavTwo = () => {
         <div className="flex items-center justify-between w-full px-4">
           {/* --- LOGO --- */}
           <div className="font-bold text-[1rem] xl:text-[1.5rem]">
-            <Link href="/">Bandage</Link>
+            <Link href="/">AuraBox</Link>
           </div>
 
           {/* --- MENU ICON / CLOSE ICON --- */}
@@ -75,20 +76,10 @@ const MobileNavTwo = () => {
         {/* Icons and Login/Register */}
         {isMenuOpen && (
           <div className="flex flex-col items-center text-[1.300rem] gap-x-[0.3rem] mt-5">
-            <div className="flex items-center gap-x-1 text-primaryColor font-normal">
-              <Image
-                src="/images/icons/user-icon.png"
-                alt="User-icon"
-                width={50}
-                height={50}
-                className="w-6 h-6"
-              />
-              <p>Login / Register</p>
-            </div>
             <div className="flex flex-col -space-y-6">
+              <IoMdCart />
               {[
                 { src: "/images/icons/search-icon.png", alt: "Search-icon" },
-                { src: "/images/icons/cart-icon.png", alt: "Cart-icon" },
                 { src: "/images/icons/wishlist-icon.png", alt: "Wishlist-icon" },
               ].map((icon, index) => (
                 <Image

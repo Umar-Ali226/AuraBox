@@ -6,7 +6,6 @@ const Pagination = () => {
       {/* --- 1st BUTTON --- */}
       <button
         className="px-[0.8rem] py-4 text-[0.785rem] text-gray-400 bg-paginationBg border-t-[0.1rem] border-l-[0.1rem]  border-b-[0.1rem]  border-gray-400 rounded-l-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 font-semibold"
-        disabled
       >
         First
       </button>
