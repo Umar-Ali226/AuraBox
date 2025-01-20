@@ -7,8 +7,17 @@ import MobileNavTwo from '@/components/MobNavTwo';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 
+// Define the type for Cart Item
+interface CartItem {
+  _id: string;
+  title: string;
+  price: number;
+  quantity: number;
+  imageUrl?: string;
+}
+
 const CartPage = () => {
-  const [cart, setCart] = useState<any[]>([]);
+  const [cart, setCart] = useState<CartItem[]>([]);  // Updated state type
 
   // Fetch the cart from localStorage
   useEffect(() => {
@@ -155,6 +164,7 @@ const CartPage = () => {
 };
 
 export default CartPage;
+
 
 // 'use client'
 // import React, { useEffect, useState } from 'react';

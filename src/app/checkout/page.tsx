@@ -120,7 +120,7 @@ const CheckoutPage = () => {
                     {cart.map((item) => (
                       <div key={item._id} className="flex justify-between items-center border-b py-2">
                         <div className="flex items-center space-x-4">
-                          <img
+                          <Image
                             src={item.productImage?.url || '/placeholder.png'}
                             alt={item.title}
                             className="w-12 h-12 object-cover"
