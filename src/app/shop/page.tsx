@@ -10,7 +10,7 @@ import Products from "@/components/Products";
 const Shoppage = () => {
   return (
     <div>
-      <TopHeader bgClass="bg-[#23856D]" />
+      <TopHeader />
       <MobileNavTwo />
       <Header />
       <Shop />
@@ -18,12 +18,12 @@ const Shoppage = () => {
 
       <div className="hidden sm:block">
         <BrandLogo />
-        <Footer topBgColor="bg-text-white" bottomBgColor="bg-textgrayOne" />
+        <Footer />
       </div>
 
       <div className="block sm:hidden">
         <BrandLogo />
-        <Footer topBgColor="bg-text-white" bottomBgColor="bg-textgrayOne" />
+        <Footer />
       </div>
     </div>
   );

@@ -9,14 +9,14 @@ import TopHeader from "@/components/TopHeader";
 const Productpage = () => {
   return (
     <div>
-      <TopHeader bgClass="bg-[#23856D]" />
+      <div className="hidden sm:flex"><TopHeader /></div>
       <Nav />
       <MobileNavTwo />
       <Productcard />
       <ProductDescription />
       <BestSellerProducts />
 
-      <Footer topBgColor="bg-white" bottomBgColor="bg-textgrayOne" />
+      <Footer />
     </div>
   );
 };

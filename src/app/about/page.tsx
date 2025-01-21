@@ -14,7 +14,7 @@ const Aboutpage = () => {
       <About />
       <Team />
       <BigCompanies />
-      <Footer topBgColor="bg-text-white" />
+      <Footer />
     </div>
   );
 };

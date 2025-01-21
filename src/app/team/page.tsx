@@ -12,7 +12,7 @@ const Teampage = () => {
       <MobileNavOne />
       <InnovationTailored />
       <Trail />
-      <Footer topBgColor="bg-text-white" />
+      <Footer />
     </div>
   );
 };

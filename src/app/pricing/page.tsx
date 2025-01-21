@@ -12,7 +12,7 @@ const Pricingpage = () => {
       <MobileNavOne />
       <Pricing />
       <Trail />
-      <Footer topBgColor="bg-text-white" />
+      <Footer/>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const Contactpage = () => {
       <NavTwo />
       <MobileNavOne />
       <Contact />
-      <Footer topBgColor="bg-white" />
+      <Footer/>
     </div>
   );
 };

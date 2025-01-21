@@ -10,7 +10,7 @@ const Nav = () => {
       <div className="container mx-auto hidden sm:flex justify-around items-center">
         {/* --- LOGO --- */}
         <div className="font-bold text-[1rem] xl:text-[1.3rem] text-[#252B42]">
-          <Link href="/">Bandage</Link>
+          <Link href="/">AuraBox</Link>
         </div>
 
         {/* --- NAVIGATION LINKS --- */}
@@ -51,7 +51,7 @@ const Nav = () => {
         <div className="hidden sm:flex items-center text-[0.700rem] xl:text-[0.875rem] gap-x-[0.3rem] -mr-2 md:-mr-14 xl:-mr-24">
           <div className="flex gap-2 items-center">
        <div className="text-[#23A6F0] text-xl"><IoIosSearch /></div>
-        <div className="text-[#23A6F0] text-xl"><IoMdCart /></div>
+        <Link href="/cart"><div className="text-[#23A6F0] text-xl"><IoMdCart /></div></Link>
         <div className="text-[#23A6F0] text-md"><FaHeart /></div>
         
           </div>

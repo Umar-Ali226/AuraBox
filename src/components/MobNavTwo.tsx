@@ -77,7 +77,7 @@ const MobileNavTwo = () => {
         {isMenuOpen && (
           <div className="flex flex-col items-center text-[1.300rem] gap-x-[0.3rem] mt-5">
             <div className="flex flex-col -space-y-6">
-              <IoMdCart />
+              <div className="text-[#23A6F0] text-3xl ml-5 mb-3"><IoMdCart /></div>
               {[
                 { src: "/images/icons/search-icon.png", alt: "Search-icon" },
                 { src: "/images/icons/wishlist-icon.png", alt: "Wishlist-icon" },
