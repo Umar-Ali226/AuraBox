@@ -53,7 +53,7 @@ const CartPage = () => {
 
   return (
     <main>
-      <TopHeader />
+      <div className='hidden sm:flex'><TopHeader /></div>
       <MobileNavTwo />
       <Header />
       <section className="w-full h-auto mt-8">

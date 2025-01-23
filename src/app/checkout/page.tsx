@@ -73,7 +73,7 @@ const CheckoutPage = () => {
 
   return (
     <main>
-      <TopHeader />
+      <div className="hidden sm:flex"><TopHeader /></div>
       <MobileNavTwo />
       <Header />
       <section className="w-full h-auto mt-8">
@@ -93,7 +93,7 @@ const CheckoutPage = () => {
                   alt="Rightarrow-icon"
                 />
               </span>
-              <span className="text-[#252B42]">Cart</span>
+              <Link href="/shop"><span className="text-[#252B42]">Cart</span></Link>
               <span>
                 <Image
                   src={"/images/icons/shoprightarrow-icon.png"}

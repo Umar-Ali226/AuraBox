@@ -131,12 +131,12 @@ const ProductCards: React.FC = () => {
       <div className="container mx-auto px-4 md:px-[5rem] lg:px-[10rem]">
         {/* Filter Section */}
         <div className="mb-4">
-          <div className="flex gap-x-4 mb-5">
+          <div className="flex sm:flex-row gap-x-4 mb-5">
             {/* Category Filter */}
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="border border-gray-400 text-[0.875rem] rounded-md py-3 bg-lightbgColor pl-3 pr-6"
+              className="pl-1 pr-3 border border-[#24A6F0] text-[0.875rem] rounded-md py-3 bg-lightbgColor sm:pl-3 sm:pr-6"
             >
               <option value="">Select Category</option>
               <option value="bed">Bed</option>
@@ -154,7 +154,7 @@ const ProductCards: React.FC = () => {
             <select
               value={selectedPriceRange}
               onChange={(e) => setSelectedPriceRange(e.target.value)}
-              className="border border-gray-400 text-[0.875rem] rounded-md py-3 bg-lightbgColor pl-3 pr-6"
+              className="pl-1 pr-3 border border-[#24A6F0] text-[0.875rem] rounded-md py-3 bg-lightbgColor sm:pl-3 sm:pr-6"
             >
               <option value="">Select Price Range</option>
               <option value="0-50">Under $50</option>

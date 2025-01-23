@@ -26,12 +26,12 @@ const Header = () => {
               width={20}
               height={20}
             />
-            <Image
+            <Link href="/cart"><Image
               src={"/images/icons/mob-cart-icon.png"}
               alt="Cart-icon"
               width={20}
               height={20}
-            />
+            /></Link>
             {/* --- MENU ICON TOGGLE --- */}
             <div onClick={toggleMenu} className="cursor-pointer">
               <Image

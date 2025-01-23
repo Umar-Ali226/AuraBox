@@ -10,7 +10,7 @@ import Products from "@/components/Products";
 const Shoppage = () => {
   return (
     <div>
-      <TopHeader />
+     <div className="hidden sm:flex"> <TopHeader /></div>
       <MobileNavTwo />
       <Header />
       <Shop />

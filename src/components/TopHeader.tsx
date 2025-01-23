@@ -2,6 +2,10 @@
 import { useEffect, useState } from 'react';
 import { client } from '../sanity/lib/client'; // Make sure this is your sanity client setup
 import Image from 'next/image';
+import { IoLogoInstagram } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa6";
+import { TiSocialFacebookCircular } from "react-icons/ti";
+import { FaTwitter } from "react-icons/fa6";
 
 // Define types for the data
 interface ContactInfo {
@@ -73,8 +77,11 @@ const TopHeader = () => {
           {/* Social Media Icons */}
           <div className="flex items-center space-x-1">
             <p className="text-white">Follow Us &nbsp; :</p>
-            <div className="flex gap-x-1 items-center">
-              {/* Add your social media icons here */}
+            <div className="flex gap-x-2 items-center">
+             <div className="text-xl text-white"><IoLogoInstagram /></div>
+             <div className="text-xl text-white"><FaWhatsapp /></div>
+             <div className="text-xl text-white"><TiSocialFacebookCircular /></div>
+             <div className="text-lg text-white"><FaTwitter /></div>
             </div>
           </div>
         </div>

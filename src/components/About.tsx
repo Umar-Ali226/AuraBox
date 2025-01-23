@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "./Button";
 
 
 const About = () => {
@@ -128,13 +127,9 @@ const About = () => {
             do not act that way.
           </p>
           <div className="flex flex-col justify-center space-y-4">
-            <Button
-              text="Get Quote Now"
-              paddingY="11px"
-              paddingL="28px"
-              paddingR="28px"
-              rounded="rounded-sm rounded-bl-sm"
-            />
+          <button className="py-[11px] pl-[28px] pr-[28px] rounded-sm rounded-bl-sm bg-[#23A6F0]">
+            Get Quote Now
+          </button>
           </div>
         </div>
 
