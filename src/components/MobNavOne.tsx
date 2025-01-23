@@ -57,6 +57,7 @@ const Header = () => {
           <ul className="flex flex-col items-center text-[1.1rem] gap-y-4 text-[#737373] font-bold">
             {[
               { label: "Home", href: "/" },
+              { label: "Shop", href: "/shop" },
               { label: "Product", href: "/product" },
               { label: "Pricing", href: "/pricing" },
               { label: "Contact", href: "/contact" },
