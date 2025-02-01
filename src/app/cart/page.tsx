@@ -6,6 +6,7 @@ import TopHeader from '@/components/TopHeader';
 import MobileNavTwo from '@/components/MobNavTwo';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
+import { urlFor } from '@/sanity/lib/image';
 
 // Define the type for Cart Item
 interface CartItem {
@@ -13,7 +14,11 @@ interface CartItem {
   title: string;
   price: number;
   quantity: number;
-  imageUrl?: string;
+  productImage: {
+    asset: {
+      _ref: string;
+    };
+  };
 }
 
 const CartPage = () => {
@@ -91,7 +96,7 @@ const CartPage = () => {
                 >
                   <div className="w-24 h-24 relative">
                     <Image
-                      src={item.imageUrl || '/placeholder.png'}
+                      src={urlFor({ asset: { _ref: item.productImage?.asset?._ref } }).url() || "/placeholder.png"}
                       alt={item.title || 'Product Image'}
                       fill
                       style={{ objectFit: 'cover' }}

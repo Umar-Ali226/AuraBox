@@ -37,12 +37,12 @@ const OrderConfirmedPage = () => {
 
           <div className="mt-10 space-x-5">
             <Link href="/shipment">
-              <button className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700">
+              <button className="px-4 sm:px-6 py-2 bg-blue-600 text-white  rounded-md hover:bg-blue-700">
                 Track Shipment
               </button>
             </Link>
             <Link href="/shop">
-              <button className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700">
+              <button className="px-4 sm:px-6 py-2 bg-blue-600 text-white  rounded-md hover:bg-blue-700">
                 Continue Shopping
               </button>
             </Link>

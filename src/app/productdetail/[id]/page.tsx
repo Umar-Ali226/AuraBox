@@ -6,9 +6,11 @@ import imageUrlBuilder from "@sanity/image-url";
 import Image from "next/image";
 import { useParams } from "next/navigation"; // Hook to get params in client components
 import { FaHeart } from "react-icons/fa";
-import { Link } from "lucide-react";
-import Nav from "@/components/Nav";
 import TopHeader from "@/components/TopHeader";
+import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import MobileNavTwo from "@/components/MobNavTwo";
 
 // Initialize Sanity Client
 const sanity = sanityClient({
@@ -63,14 +65,34 @@ export default function Products() {
     );
   }
 
+    // Add item to cart function
+    const addToCart = (product: Product) => {
+      const cart: Product[] = JSON.parse(localStorage.getItem('cart') || "[]");
+      const existingProduct = cart.find((item) => item._id === product._id);
+  
+      if (existingProduct) {
+        if (existingProduct.quantity !== undefined) {
+          existingProduct.quantity += 1; // Increase quantity if product already in cart
+        } else {
+          existingProduct.quantity = 1; // Initialize quantity if undefined
+        }
+      } else {
+        cart.push({ ...product, quantity: 1 }); // Add new product to cart
+      }
+  
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${product.title} has been added to the cart!`);
+    };
+
   const truncateDescription = (description: string): string => {
     return description.length > 350 ? description.substring(0, 350) + "..." : description;
   };
 
   return (
         <main>
-          <TopHeader />
-          <Nav />
+          <div className="hidden sm:flex"><TopHeader/></div>
+          <Header />
+          <MobileNavTwo />
           <div className="w-full bg-textgrayOne mt-3 h-[60rem] sm:h-[45rem] md:h-[36rem]">
             <div className="container mx-auto">
               {/* Breadcrumb */}
@@ -152,9 +174,12 @@ export default function Products() {
     
                   {/* Action Buttons */}
                   <div className="flex space-x-4 mt-4">
-                    <button className="bg-blue-500 text-white px-6 py-2 rounded-sm">
-                      Add To Cart
-                    </button>
+                  <button
+                    onClick={() => addToCart(product)}
+                    className="mt-4 w-full bg-blue-600 text-white py-2 hover:bg-blue-700"
+                  >
+                    Add To Cart
+                  </button>
                     <div className="flex space-x-2 items-center">
                       <button className="p-2 border rounded-full">
                         <FaHeart />
@@ -165,20 +190,7 @@ export default function Products() {
               </div>
             </div>
           </div>
+          <Footer />
         </main>
       );
-  // return (
-  //   <div className="product-details">
-  //     <h1 className="text-4xl font-bold">{product.title}</h1>
-  //     <Image
-  //       src={urlFor(product.productImage).url()}
-  //       alt={product.title}
-  //       width={500}
-  //       height={500}
-  //     />
-  //     <h2 className="text-xl mt-4">Price: ${product.price}</h2>
-  //     {product.isNew && <span className="text-green-500">New Arrival</span>}
-  //     <div className="description mt-6">{renderParagraphs(product.description)}</div>
-  //   </div>
-  // );
 }

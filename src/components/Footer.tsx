@@ -105,7 +105,7 @@ const Footer = () => {
                   placeholder={footerData.subscribeForm.placeholder}
                   className="border border-gray-300 p-2 rounded-l-md"
                 />
-                <button className="bg-[#23A6F0] text-white px-4 py-2 rounded-r-md">
+                <button className="bg-[#23A6F0] text-white px-2 py-2 rounded-r-md">
                   {footerData.subscribeForm.buttonText}
                 </button>
               </div>

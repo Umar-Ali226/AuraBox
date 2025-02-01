@@ -7,6 +7,7 @@ import TopHeader from '@/components/TopHeader';
 import MobileNavTwo from '@/components/MobNavTwo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { urlFor } from '@/sanity/lib/image';
 
 // Define types for cart item
 interface CartItem {
@@ -14,8 +15,10 @@ interface CartItem {
   title: string;
   price: number;
   quantity: number;
-  productImage?: {
-    url: string;
+  productImage: {
+    asset: {
+      _ref: string;
+    };
   };
 }
 
@@ -121,7 +124,7 @@ const CheckoutPage = () => {
                       <div key={item._id} className="flex justify-between items-center border-b py-2">
                         <div className="flex items-center space-x-4">
                           <Image
-                            src={item.productImage?.url || '/placeholder.png'}
+                            src={urlFor({ asset: { _ref: item.productImage?.asset?._ref } }).url() || "/placeholder.png"}
                             alt={item.title}
                             width={48}
                             height={48}

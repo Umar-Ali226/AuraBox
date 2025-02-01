@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { IoMdCart } from "react-icons/io";
+import { IoIosSearch } from "react-icons/io";
+import { FaRegHeart } from "react-icons/fa";
 
 const MobileNavTwo = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,21 +78,10 @@ const MobileNavTwo = () => {
         {/* Icons and Login/Register */}
         {isMenuOpen && (
           <div className="flex flex-col items-center text-[1.300rem] gap-x-[0.3rem] mt-5">
-            <div className="flex flex-col -space-y-6">
-              <Link href="/cart"><div className="text-[#23A6F0] text-3xl ml-5 mb-3"><IoMdCart /></div></Link>
-              {[
-                { src: "/images/icons/search-icon.png", alt: "Search-icon" },
-                { src: "/images/icons/wishlist-icon.png", alt: "Wishlist-icon" },
-              ].map((icon, index) => (
-                <Image
-                  key={index}
-                  src={icon.src}
-                  alt={icon.alt}
-                  width={50}
-                  height={50}
-                  className="w-20 h-20"
-                />
-              ))}
+            <div className="flex flex-col space-y-6">
+              <Link href="/cart"><div className="text-[#23A6F0] text-3xl ml-3 mb-1"><IoMdCart /></div></Link>
+              <div className="text-[#23A6F0] text-3xl ml-3 mb-1"><FaRegHeart /></div>
+              <div className="text-[#23A6F0] text-4xl ml-3 mb-1"><IoIosSearch /></div>
             </div>
           </div>
         )}
